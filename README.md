@@ -132,7 +132,8 @@ Load `HEX-LOADER 2.0` from disk, run, and load the machine language sequence fil
 - If the machine langauge sequence file is named `X.SEQ`, then the machine langauge `PRG` file will be named `X`.
 - In the example below, the machine language sequence file `HELLO.SEQ`, is compiled to a machine language `PRG` file named `HELLO`.
 
-![](images\screenshots\run-hex-loader.png)
+![](images/screenshots/run-hex-loader.png)
+    
 
 Load the machine language program from disk, and run using the `SYS` command.
 
@@ -159,6 +160,7 @@ Load the machine language program from disk, and run using the `SYS` command.
 ## License
 
 This is a personal retrocomputing project shared for historical and educational purposes.
+
 
 
 
