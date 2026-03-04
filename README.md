@@ -3,23 +3,23 @@
 |||||
 |:---:|:---:|:---:|:---:|
 |![](images/screenshots/sequence-file-generator.png)|![](images/screenshots/run-hex-loader.png)|![](images/screenshots/run-ml-program.png)|
-
+     
 A Commodore 64 BASIC program that loads hex-encoded 6502/6510 machine language into memory.
 
-- Back in the 1980s many of us never had cartridge or software based monitors (debuggers) or assemblers.
-- In the absence of these tools we would write simple machine language loaders in BASIC.
+- Back in the 1980s, many of us never had cartridge or software-based monitors (debuggers) or assemblers.
+- In the absence of these tools, we would write simple machine language loaders in BASIC.
 - The workflow was roughly;
   1. Hand-assemble an assembly language programs on pencil and paper.
   2. Type the op-codes into a BASIC loader, usually through a set of BASIC `DATA` statements.
   3. Then run the BASIC loader, which would write all of the machine language op codes into RAM.
   4. Execute a `SYS <address>` command to run the machine language program.
 
-At this time, I wrote a series of development tools including a BASIC loader that could parse strings of HEX opcodes and address commands, making the hand-assembly to type-in process a bit more comfortable in the absence of a proper monitor.
-- I very creativly called the HEX op-code machine language loader, `HEX-Loader`.
-- I wrote two versions of `HEX-Loader`, one that stored the HEX encoded machine language as text strings in `DATA` statements, and another more memory friendly version that read the machine language op-codes from a sequence (text) file.
+At this time, I wrote a series of development tools, including a BASIC loader that could parse strings of HEX opcodes and address commands, making the hand-assembly to type-in process a bit more comfortable in the absence of a proper monitor.
+- I very creatively called the HEX op-code machine language loader, `HEX-Loader`.
+- I wrote two versions of `HEX-Loader`, one that stored the HEX encoded machine language as text strings in `DATA` statements, and another, more memory-friendly version that read the machine language op-codes from a sequence (text) file.
 - The sequence-file version of `HEX-Loader` was the one I used to use the most, but it had an extra step to use it. The workflow was;
 
-  1. Hand-assemble assembly program to HEX opcodes.
+  1. Hand-assemble the assembly program to HEX opcodes.
   2. Type the HEX op-codes into a machine language sequence file generator.
      - The machine language sequence file generator was similar to a regular BASIC machine language loader program, except it just saved the strings of HEX op-codes to a sequence file, instead of loading them into RAM.
      - "Sequence file" was just the name used in the Commodore ecosystem in those days for plain text files.
@@ -37,7 +37,7 @@ This overview covers the sequence-file version of `HEX-Loader`, since that was t
 
 Machine language programs are stored in plain text sequence files, with each line being a string of space-separated hex bytes, with address commands to set the load origin address. 
 
-Address commands can be include in any line in the sequence file to set a new base address for bytes that follow, allowing for easy positioning of code in RAM.
+Address commands can be included in any line in the sequence file to set a new base address for bytes that follow, allowing for easy positioning of code in RAM.
 
 |HEX-Encoded 6502/10 Machine Language|Description
 |:--|:--|
@@ -54,7 +54,7 @@ Address commands can be include in any line in the sequence file to set a new ba
 
 ### 1. Hand assemble Program
 
-Hand assemble an assembly language program into 6502 machine language. For example the "Hello World!" program below. This would typically require using an 6502/6510 instruction set table or reference. I used to use the instruction set reference in the "Commodore 64 Programmers Reference Guide". 
+Hand assemble an assembly language program into 6502 machine language. For example, the "Hello World!" program below. This would typically require using a 6502/6510 instruction set table or reference. I used to use the instruction set reference in the "Commodore 64 Programmers Reference Guide". 
 
 **Annotated Assembly**
 
@@ -137,7 +137,7 @@ Load `HEX-LOADER 2.0` from disk, run, and load the machine language sequence fil
 
 Load the machine language program from disk, and run using the `SYS` command.
 
-![](images\screenshots\run-ml-program.png)
+![](images/screenshots/run-ml-program.png)
 
 
 ## File Listing
@@ -160,6 +160,7 @@ Load the machine language program from disk, and run using the `SYS` command.
 ## License
 
 This is a personal retrocomputing project shared for historical and educational purposes.
+
 
 
 
