@@ -2,7 +2,7 @@
 
 |||||
 |:---:|:---:|:---:|:---:|
-|![](c64-hex-loader/images/screenshots/sequence-file-generator.png)|![](images/screenshots/run-hex-loader.png)|![](images/screenshots/run-ml-program.png)|
+|![](/images/screenshots/sequence-file-generator.png)|![](images/screenshots/run-hex-loader.png)|![](images/screenshots/run-ml-program.png)|
 
 A Commodore 64 BASIC program that loads hex-encoded 6502/6510 machine language into memory.
 
@@ -159,6 +159,7 @@ Load the machine language program from disk, and run using the `SYS` command.
 ## License
 
 This is a personal retrocomputing project shared for historical and educational purposes.
+
 
 
 
